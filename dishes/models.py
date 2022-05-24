@@ -3,22 +3,22 @@ from django.db import models
 # Create your models here.
 
 
-class Ingredients(models.Model):
+class Ingredient(models.Model):
     ingredient = models.CharField(max_length=50)
     calories = models.IntegerField()
 
 
 
-class Dishes(models.Model):
+class Dish(models.Model):
     dish_name = models.CharField(max_length=50)
     calories = models.IntegerField()
     quantity = models.IntegerField()
-    ingredients_id = models.ManyToManyField(Ingredients) 
+    ingredients_id = models.ManyToManyField(Ingredient) 
 
 
 class User(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    dishes = models.ManyToManyField(Dishes)
+    dishes = models.ManyToManyField(Dish)
     def __str__(self):
         return self.first_name
