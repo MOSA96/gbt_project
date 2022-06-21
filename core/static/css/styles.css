@@ -17,3 +17,36 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+
+.signup-form {
+    background-color: rgb(212, 221, 221);
+}
+
+.log-border {
+    border: 1px;
+    border-radius: 16px;
+    border-style: solid;
+}
+
+.log-padding {
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+input {
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 0.2rem rgba(90, 125, 98, 0.25);
+} 
+
+.center-button { 
+    text-align: center; 
+    margin-top: 10px;
+
+}

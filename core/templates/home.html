@@ -1,29 +1,29 @@
 {% extends "base.html" %}
 
-{% block title %}  
+{% block title %}
 Home Page
-{% endblock title %}  
+{% endblock title %}
 
 {% block content %}
 
 <div class="p-5 mb-4 bg-light rounded-3 jumbotron-homepage">
-  <div class="container-fluid py-5">
-      <h1 class="display-5 fw-bold" style="text-align:center">HOME PAGE</h1>
-      <div class="row row-title">
-          <div class="row">
-              <p class="fs-3">Welcome to the food app. Here you can keep track of your eating habits</p>
-          </div>
-      </div>
-      <div style="text-align:center;">
-          <button class="btn btn-primary btn-lg" type="button">Register</button>
-      </div>
-      <br>
-      <div style="text-align: center;">
-          <p>Already have an account? <a href="#">Log In</a></p>
-      </div>
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold" style="text-align:center">HOME PAGE</h1>
+        <div class="row row-title">
+            <div class="row">
+                <p class="fs-3">Welcome to the food app. Here you can keep track of your eating habits</p>
+            </div>
+        </div>
+        <div style="text-align:center;">
+            <a href="{% url 'signup' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Sign Up</a>
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <p>Already have an account? <a href="{% url 'login' %}">Log In</a></p>
+        </div>
 
-  </div>
+    </div>
 </div>
 
 <img src="../static/images/junkfood.jpg" class="center">
-{% endblock content %}  
+{% endblock content %}
