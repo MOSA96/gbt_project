@@ -22,6 +22,7 @@ urlpatterns = [
     path('dishes/', include('dishes.urls')),
     path('admin/', admin.site.urls),
 ]
+
 urlpatterns += [
     path('', RedirectView.as_view(url='home/')),
 ]

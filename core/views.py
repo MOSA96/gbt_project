@@ -22,6 +22,12 @@ def contact(request):
     return render(request, 'contact.html')
 
 
+#Profile view
+
+def user_profile(request):
+    return render(request, 'user_profile.html')
+
+
 #Log In views
 def signup(request):
     return render(request, 'signup.html')
@@ -45,8 +51,8 @@ def loginview(request):
 
     return render(request, 'login.html')
 
+def logout_user(request):
+    print('logged out')
+    logout(request)
 
-def logout(request):
-    if request.user:
-        logout(request)
     return redirect('home')
