@@ -16,6 +16,11 @@ class Dish(models.Model):
     ingredients_id = models.ManyToManyField(Ingredient) 
 
 
+class Food(models.Model):
+    fcd_id = models.IntegerField()
+    description = models.TextField()
+
+
 class User(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)

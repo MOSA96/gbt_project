@@ -1,7 +1,7 @@
 from ssl import DefaultVerifyPaths
 from django.contrib import admin
 from django.db.models import Count
-from .models import User, Dish, Ingredient
+from .models import User, Dish, Ingredient, Food
 # Register your models here.
 
 @admin.register(User)
@@ -44,4 +44,8 @@ class IngredientsAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {'fields': ('ingredient',)}),
         ('Nutrimental info', {'fields': ('calories',)})
-    )
+    )   
+
+@admin.register(Food)
+class FoodAdmin(admin.ModelAdmin):
+    list_display = ('fcd_id', 'description')
