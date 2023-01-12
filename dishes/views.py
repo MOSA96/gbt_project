@@ -9,3 +9,11 @@ def index(request):
         'num_user': num_user,
     }
     return render(request, 'index.html', context=context)
+
+
+def dishes(request):
+    return render(request, 'mydishes.html')
+
+
+def add_dish(request):
+    return render(request, 'add_dish.html')
